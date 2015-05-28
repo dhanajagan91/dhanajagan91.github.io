@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+
+<title>DHANANJAI J</title>
+<meta charset="utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	
+<meta name="author" content="dhananjai j" />
+
+<script>/*this function is called when = is pressed and the answer is evaluate */
+
+/*changed from src to included js*/
+
+
+function evauate()
+
+{  try{
+	var a=document.getElementById("e").value;
+ 
+        document.getElementById("e").value=eval(a);
+   }
+ 
+
+    catch(err)
+ 
+    {
+   var message = document.getElementById("e");
+    
+        message.value = "error type correctly";
+   }
+
+} 
+   
+ 
+
+/*this is used to add the characters pressed onto the display screen*/
+
+
+function addchar(t)
+
+{
+	var a=document.getElementById("e").value;
+	
+     if(t=='RES')
+		
+    document.getElementById("e").value="";
+        
+       else if(t=="DEL")
+      
+    {  document.getElementById("e").value = a.substr(0 , (a.length)-1);
+     //deleting the element when DEL is pressed
+  
+    }
+
+       
+   else
+     
+     {document.getElementById("e").value+=t;
+     }
+
+}
+function factorial(a)
+{var b=1;
+ for(i=1;i<=a;i++)
+ {b=b*i;
+  }
+document.getElementById("e").value=b;
+}
+</script>
+
+
+<style>
+
+
+
+
+input{ position:relative;
+  font-size:20px;
+       left:13px;
+
+       top:20px;
+  
+       background-color:white;
+ 
+       width:215px;
+
+       height:50px;
+     
+     }
+body{  background-color: yellow;/*This stratement is in case the browser doen't support
+                                                                            
+       linear gradient*/
+background-image: -webkit-linear-gradient(left,white,blue);/* for chrome and safari */
+         
+	background-image: -moz-linear-gradient(left,white,blue);/*for firefox */
+         	
+      background-image: -o-linear-gradient(left,white,blue);/*for opera */
+ 
+     }
+
+.box{ background-color:#5c8a8a;
+     
+      height:380px;
+    
+      width:245px;
+     
+    
+      position:relative;
+    
+      top:5px;
+    
+      left:5%;
+    
+     }
+
+
+#but{position:relative;
+     background-color:#ff3333;
+     
+     color:white;
+ 
+     top:10px;
+   
+     left:5% ;
+ 
+     width:52px;
+   
+     height:40px;
+  
+     justify-content:space-around;
+    
+     clip:rect(0px,30px,30px,0px);
+     }
+
+
+
+#but1
+
+     {position:relative;
+     background-color:black;
+     
+     color:white;
+ 
+     top:10px;
+   
+     left:5% ;
+ 
+     width:52px;
+   
+     height:40px;
+  
+     justify-content:space-around;
+    
+     clip:rect(0px,30px,30px,0px);
+     }
+
+
+
+p{line-height:10px;}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<h1>self intro and calculator design</h1>
+
+
+<h2>my first project</h2>
+
+
+<p>i am from cs dept and my native is neyveli tamilnadu
+<h3>MY HOBBIES : </h3>
+	          
+<ol style="color:purple;">
+	          	
+<li>Playing and watching Cricket </li>
+	          	
+<li>watching movies </li>
+	
+</ol>
+</p>
+
+
+<div class="box">
+
+
+<div >
+
+
+<input type="text" id="e" readonly>
+
+</div>
+
+
+<br>
+<p>
+
+<input id="but" type="button" value="7" onclick="addchar(7);">
+
+<input id="but" type="button" value="8" onclick="addchar(8);">
+
+<input id="but" type="button" value="9" onclick="addchar(9);">
+
+<input id="but1" type="button" value="DEL" onclick="addchar('DEL');"><br></p>
+
+<p><input id="but" type="button" value="4" onclick="addchar(4);">
+
+<input id="but" type="button" value="5" onclick="addchar(5);">
+
+<input id="but" type="button" value="6" onclick="addchar(6);">
+
+<input id="but" type="button" value="/" onclick="addchar('/');"><br></p>
+
+<p><input id="but" type="button" value="1" onclick="addchar(1);">
+
+<input id="but" type="button" value="2" onclick="addchar(2);">
+
+<input id="but" type="button" value="3" onclick="addchar(3);">
+
+<input id="but" type="button" value="*" onclick="addchar('*');"><br></p>
+
+<p><input id="but" type="button" value="." onclick="addchar('.');">
+
+<input id="but" type="button" value="0" onclick="addchar(0);">
+
+<input id="but" type="button" value="=" onclick="evauate();">
+
+<input id="but" type="button" value="-" onclick="addchar('-');"> <br></p>
+
+<input id="but" type="button" value="+" onclick="addchar('+');">
+
+<input id="but" type="button" value="RES" onclick="addchar('RES');">
+
+<input id="but" type="button" value="(" onclick="addchar('(');">
+
+<input id="but" type="button" value=")" onclick="addchar(')');">
+
+
+</div>
+
+
+
+</div>
+
+
+</body>
+
+
+</html>
